@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title = title   
+        script(defer, src="/public/js/createQuestion.js")
+    body
+
+        form(action="", method="post", id="form-add")
+            div(class="inputContainer")
+                label(for="question") Question : 
+                input(required, type="text", name="question", id="question") 
+            div(class="inputContainer")
+                label(for="answer") Réponse juste : 
+                input(required, type="text", name="answer", id="answer")
+            div(class="falseAnswersC", id="falseAnswerC")
+                label(for="falseAns1") Réponse fausse 1 : 
+                input(required, type="text", name="falseAns1", id="falseAns1")
+
+            button(type="button", onclick="addAnswer()") Add a false answer
+
+            button(type="submit", name="submit", value="submit") Submit
